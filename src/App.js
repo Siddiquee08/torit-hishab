@@ -10,7 +10,7 @@ function App() {
       <Header></Header>
       <div className="flex flex-col justify-center items-center">
         <img src={image} alt="" />
-        <h1 className="text-3xl text-blue-400 mt-2 font-bold text-center">
+        <h1 className=" text-xl text-s-3xl text-blue-400 mt-2 font-bold text-center">
           তড়িৎ হিসাব
         </h1>
       </div>
