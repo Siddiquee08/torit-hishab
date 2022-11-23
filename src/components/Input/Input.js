@@ -11,7 +11,6 @@ const Input = () => {
    const unit = (watt * hour * 0.8) / 1000
    const money = (unit * 24 * 0.7 * 10.3).toFixed(2)
    setBill(money)
-   form.reset()
   }
   return (
     <>
