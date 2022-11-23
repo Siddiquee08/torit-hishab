@@ -1,0 +1,8 @@
+.money{
+    border: 1px solid red;
+}
+.money-input{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
