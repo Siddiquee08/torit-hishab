@@ -14,7 +14,7 @@ const Input = () => {
    const money = Math.ceil(moneyFloat)
    const deviationRate = Math.ceil(money * .13 )
    setBill(money)
-   setDeviation(deviationRate)
+    setDeviation(deviationRate)
   }
   return (
     <>
@@ -35,6 +35,7 @@ const Input = () => {
                       placeholder="ওয়াট"
                       name="watt"
                       className="input input-bordered text-center"
+                      required
                     />
                   </div>
                   <div className="form-control">
@@ -46,6 +47,7 @@ const Input = () => {
                       placeholder="ঘন্টা"
                       name="hour"
                       className="input input-bordered text-center"
+                      required
                     />
                   </div>
                   <div className="form-control mt-6">
