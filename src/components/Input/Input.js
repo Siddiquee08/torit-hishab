@@ -3,14 +3,18 @@ import "./Input.css";
 
 const Input = () => {
   const [bill, setBill] = useState(0)
+  const [deviation, setDeviation] = useState(0)
   const submitForm = (event) => {
     event.preventDefault()
    const form = event.target
    const watt = parseFloat(form.watt.value)
    const hour = parseFloat(form.hour.value)
    const unit = (watt * hour * 0.8) / 1000
-   const money = (unit * 24 * 0.7 * 9).toFixed(2)
+   const moneyFloat = (unit * 24 * 0.7 * 9).toFixed(2)
+   const money = Math.ceil(moneyFloat)
+   const deviationRate = Math.ceil(money * .13 )
    setBill(money)
+   setDeviation(deviationRate)
   }
   return (
     <>
@@ -54,9 +58,9 @@ const Input = () => {
         </div>
       </form>
       <div className="money-input mt-5">
-        <p className="text-blue-400"><span className="bill-text">আপনার সম্ভাব্য মাসিক বিল হলো (±)</span></p>
+        <p className="text-blue-400"><span className="bill-text">আপনার সম্ভাব্য মাসিক বিল হলো</span></p>
         <div className="bg-blue-400 bill-container">
-        <p className="text-white text-xl p-4">{bill} Taka.</p>
+        <p className="text-white p-4">{bill} Taka (± {deviation} Taka).</p>
         </div>
       </div>
     </>
