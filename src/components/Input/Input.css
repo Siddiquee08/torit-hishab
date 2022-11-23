@@ -1,11 +1,35 @@
-
+input:focus{
+outline: none !important;
+border-color:#27AAE1;
+}
+span{
+    display: block;
+    width: 100%;
+    text-align: center !important;
+}
 .money-input{
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
+.text-ip{
+    font-size: 16px;
+    font-weight: 900;
+}
 .bill-container{
     width: 50vmin;
-    text-align: end;
+    text-align: center;
+    background-color: #27AAE1;
+    font-family: 'Roboto';
+    font-weight: 900;
+}
+.submit{
+    background-color: #27AAE1;
+}
+.bill-text{
+    color: #27AAE1;
+}
+.submit:hover{
+    background-color: #0082BA;
 }

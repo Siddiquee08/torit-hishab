@@ -20,21 +20,22 @@ const Input = () => {
     <>
       <form onSubmit={submitForm}>
         <div className="form">
-          <div className="hero mt-3">
+          <div className="hero -mt-3">
             <div>
-              <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-200">
+              <div className="card flex-shrink-0 w-full max-w-sm">
                 <div className="card-body">
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">
-                        ব্যবহৃত ইলেক্ট্রিক যন্ত্রটির ওয়াট রেটিং
+                        ব্যবহৃত ইলেক্ট্রিক যন্ত্রটি কত ওয়াটের?
                       </span>
                     </label>
                     <input
                       type="text"
                       placeholder="ওয়াট"
                       name="watt"
-                      className="input input-bordered text-center"
+                      className="input input-bordered rounded-none text-center text-2xl"
+                      style={{ fontWeight: "900" }}
                       required
                     />
                   </div>
@@ -46,7 +47,7 @@ const Input = () => {
                       type="text"
                       placeholder="ঘন্টা"
                       name="hour"
-                      className="input input-bordered text-center"
+                      className="input input-bordered  rounded-none text-center text text-2xl"
                       required
                     />
                   </div>
@@ -54,7 +55,7 @@ const Input = () => {
                     <input
                       type="submit"
                       value="হিসাব"
-                      className="btn btn-primary bg-blue-400 border-none text-end"
+                      className="btn rounded-none btn-primary submit border-none text-end text text-2xl"
                     />
                   </div>
                 </div>
@@ -64,13 +65,14 @@ const Input = () => {
         </div>
       </form>
       <div className="money-input mt-5">
-        <p className="text-blue-400">
-          <span className="bill-text">আপনার সম্ভাব্য মাসিক বিল হলো</span>
+        <p className="bill-text">
+          <span>আপনার সম্ভাব্য মাসিক বিল হলো</span>
         </p>
-        <div className="bg-blue-400 bill-container shadow-2xl">
-          <p className="text-white p-4">
-            {bill} Taka (± {deviation} Taka).
+        <div className="bill-container p-3">
+          <p className="text-white">
+            <span className="text-xl">{bill} Taka</span>
           </p>
+          <p className="text-white">(± {deviation} Taka)</p>
         </div>
       </div>
     </>
