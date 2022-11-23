@@ -16,6 +16,9 @@ const Input = () => {
     setBill(money);
     setDeviation(deviationRate);
   };
+  const downUnder = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
   return (
     <>
       <form onSubmit={submitForm}>
@@ -31,20 +34,19 @@ const Input = () => {
                       </span>
                     </label>
                     <input
-                      type="text"
+                      type="tel"
                       placeholder="ওয়াট"
                       name="watt"
                       className="input input-bordered rounded-none text-center text-2xl"
-                      style={{ fontWeight: "900" }}
                       required
                     />
                   </div>
                   <div className="form-control">
                     <label className="label">
-                      <span className="label-text">কতক্ষণ চলে</span>
+                      <span className="label-text">দৈনিক কতক্ষণ চলে</span>
                     </label>
                     <input
-                      type="text"
+                      type="tel"
                       placeholder="ঘন্টা"
                       name="hour"
                       className="input input-bordered  rounded-none text-center text text-2xl"
@@ -56,6 +58,7 @@ const Input = () => {
                       type="submit"
                       value="হিসাব"
                       className="btn rounded-none btn-primary submit border-none text-end text text-2xl"
+                      onClick={downUnder}
                     />
                   </div>
                 </div>
@@ -66,7 +69,7 @@ const Input = () => {
       </form>
       <div className="money-input mt-5">
         <p className="bill-text">
-          <span>আপনার সম্ভাব্য মাসিক বিল হলো</span>
+          <span>ইলেক্ট্রিক যন্ত্রটি্র সম্ভাব্য মাসিক খরচ</span>
         </p>
         <div className="bill-container p-3">
           <p className="text-white">
