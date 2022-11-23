@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <>
+    <div className="">
       <Header></Header>
       <div className="flex flex-col justify-center items-center">
         <img src={image} alt="" />
@@ -16,7 +16,7 @@ function App() {
       </div>
       <Input></Input>
       <Footer></Footer>
-    </>
+    </div>
   );
 }
 

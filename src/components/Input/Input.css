@@ -1,6 +1,4 @@
-.money{
-    border: 1px solid red;
-}
+
 .money-input{
    display: flex;
    flex-direction: column;
