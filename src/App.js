@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
 import image from "./assets/IMG_20221122_185610.png";
 import Input from "./components/Input/Input";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         </h1>
       </div>
       <Input></Input>
+      <Footer></Footer>
     </>
   );
 }
