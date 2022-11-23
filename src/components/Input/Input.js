@@ -45,12 +45,6 @@ const Input = () => {
                       className="input input-bordered text-center"
                     />
                   </div>
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text">আপনার সম্ভাব্য মাসিক বিল হলো, টাকাঃ</span>
-                    </label>
-                    <input type="text" value={bill} className="input input-bordered text-center" />
-                  </div>
                   <div className="form-control mt-6">
                   <input type="submit" value="হিসাব" className="btn btn-primary bg-blue-400 border-none text-end" />
                   </div>
@@ -60,6 +54,12 @@ const Input = () => {
           </div>
         </div>
       </form>
+      <div className="money-input mt-5">
+        <p className="text-blue-400"><span className="bill-text">আপনার সম্ভাব্য মাসিক বিল হলো</span></p>
+        <div className="bg-blue-400 bill-container">
+        <p className="text-white text-xl p-4">{bill} Taka.</p>
+        </div>
+      </div>
     </>
   );
 };

@@ -3,6 +3,11 @@
 }
 .money-input{
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
+}
+.bill-container{
+    width: 50vmin;
+    text-align: end;
 }
