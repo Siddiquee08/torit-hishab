@@ -43,7 +43,7 @@ const Input = () => {
                   </div>
                   <div className="form-control">
                     <label className="label">
-                      <span className="label-text">দৈনিক কতক্ষণ চলে</span>
+                      <span className="label-text">দৈনিক কতক্ষণ চলে?</span>
                     </label>
                     <input
                       type="tel"

@@ -6,7 +6,7 @@ const Header = () => {
     <div>
       <div className="hero min-h-75">
         <div className="hero-content text-center">
-          <div className="max-w-md">
+          <div className="max-w-md bill-text">
             <h1 className="text-2xl text-m-3xl font-bold">বিল কত আসবে আমার?</h1>
             <p className="py-2 emphasize">
               এই প্রশ্ন আমাকে আমার পরিচিতরা করে আসছেন যখনই তাঁরা কোন নতুন
