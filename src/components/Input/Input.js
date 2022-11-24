@@ -9,10 +9,10 @@ const Input = () => {
     const form = event.target;
     const watt = parseFloat(form.watt.value);
     const hour = parseFloat(form.hour.value);
-    const unit = (watt * hour * 0.8) / 1000;
-    const moneyFloat = (unit * 24 * 0.7 * 9).toFixed(2);
+    const unit = (watt * hour) / 1000;
+    const moneyFloat = (unit * 24 * 0.7 * 7).toFixed(2);
     const money = Math.ceil(moneyFloat);
-    const deviationRate = Math.ceil(money * 0.13);
+    const deviationRate = Math.ceil(money * 0.14);
     setBill(money);
     setDeviation(deviationRate);
   };
