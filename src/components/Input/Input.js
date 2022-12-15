@@ -27,6 +27,8 @@ const Input = () => {
       if (hour <= 24) {
         setUserInfo({ ...userInfo, hour: hour });
         setError("");
+      } else {
+        setError("A day has 24 hours");
       }
     } else {
       return setError("Please enter valid characters/numbers");
