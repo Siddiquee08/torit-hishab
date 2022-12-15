@@ -13,8 +13,8 @@ const Input = () => {
   const [error, setError] = useState("");
 
   const handleWatt = (e) => {
-    const watt = parseFloat(e.target.value);
-    if (!/^\d+$/.test(watt)) {
+    const watt = e.target.value;
+    if (!/^[0-9]*$/.test(watt)) {
       return setErrorWatt("Please enter numbers only");
     } else {
       setUserInfo({ ...userInfo, watt: e.target.value });
@@ -22,10 +22,12 @@ const Input = () => {
     }
   };
   const handleHour = (e) => {
-    const hour = parseFloat(e.target.value);
-    if (/^\d+$/.test(hour) && hour <= 60) {
-      setUserInfo({ ...userInfo, hour: hour });
-      setError("");
+    const hour = e.target.value;
+    if (/^[0-9]*$/.test(hour)) {
+      if (hour <= 24) {
+        setUserInfo({ ...userInfo, hour: hour });
+        setError("");
+      }
     } else {
       return setError("Please enter valid characters/numbers");
     }
@@ -59,7 +61,6 @@ const Input = () => {
                     <input
                       type="tel"
                       placeholder="ওয়াট"
-                      name="watt"
                       className="input input-bordered rounded-none text-center text-2xl"
                       required
                       value={userInfo.watt}
@@ -74,7 +75,6 @@ const Input = () => {
                     <input
                       type="tel"
                       placeholder="ঘন্টা"
-                      name="hour"
                       className="input input-bordered  rounded-none text-center text text-2xl"
                       value={userInfo.hour}
                       onChange={handleHour}
