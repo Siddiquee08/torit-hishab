@@ -7,18 +7,20 @@ const Input = () => {
     hour: "",
   });
 
+  const [error, setError] = useState({
+    watt: "",
+    hour: "",
+  });
   const [bill, setBill] = useState(0);
   const [deviation, setDeviation] = useState(0);
-  const [errorWatt, setErrorWatt] = useState("");
-  const [error, setError] = useState("");
 
   const handleWatt = (e) => {
     const watt = e.target.value;
     if (!/^[0-9]*$/.test(watt)) {
-      return setErrorWatt("Please enter numbers only");
+      return setError({ ...error, watt: "ইনপুট হিসেবে সংখ্যা দিন" });
     } else {
       setUserInfo({ ...userInfo, watt: e.target.value });
-      setErrorWatt("");
+      setError("");
     }
   };
   const handleHour = (e) => {
@@ -28,7 +30,7 @@ const Input = () => {
         setUserInfo({ ...userInfo, hour: hour });
         setError("");
       } else {
-        setError("A day has 24 hours");
+        setError({ error, hour: "২৪ ঘন্টার বেশি অগ্রহণযোগ্য" });
       }
     } else {
       return setError("Please enter valid characters/numbers");
@@ -69,7 +71,9 @@ const Input = () => {
                       onChange={handleWatt}
                     />
                   </div>
-                  <p className="text-orange-400">{errorWatt}</p>
+                  {error.watt && (
+                    <p className="text-orange-400">{error.watt}</p>
+                  )}
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">দৈনিক কতক্ষণ চলে?</span>
@@ -83,7 +87,9 @@ const Input = () => {
                       required
                     />
                   </div>
-                  <p className="text-orange-400">{error}</p>
+                  {error.hour && (
+                    <p className="text-orange-400">{error.hour}</p>
+                  )}
                   <div className="form-control mt-6">
                     <input
                       type="submit"
