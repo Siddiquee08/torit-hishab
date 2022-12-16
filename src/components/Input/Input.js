@@ -20,7 +20,7 @@ const Input = () => {
       return setError({ ...error, watt: "ইনপুট হিসেবে সংখ্যা দিন" });
     } else {
       setUserInfo({ ...userInfo, watt: e.target.value });
-      setError("");
+      setError({ ...error, watt: "" });
     }
   };
   const handleHour = (e) => {
@@ -28,12 +28,15 @@ const Input = () => {
     if (/^[0-9]*$/.test(hour)) {
       if (hour <= 24) {
         setUserInfo({ ...userInfo, hour: hour });
-        setError("");
+        setError({ ...error, hour: "" });
       } else {
-        setError({ error, hour: "২৪ ঘন্টার বেশি অগ্রহণযোগ্য" });
+        return setError({ error, hour: "আমরা জানি ২৪ ঘন্টায় একদিন" });
       }
     } else {
-      return setError("Please enter valid characters/numbers");
+      return setError({
+        ...error,
+        hour: "ইনপুট হিসেবে সংখ্যা দিন",
+      });
     }
   };
   const downUnder = (event) => {
