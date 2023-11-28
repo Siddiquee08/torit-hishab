@@ -110,7 +110,7 @@ const Input = () => {
         </div>
       </form>
       <div className="money-input mt-5">
-        <p className="bill-text font-['body']">
+        <p className="bill-text">
           <span>ইলেক্ট্রিক যন্ত্রটি্র সম্ভাব্য মাসিক খরচ</span>
         </p>
         <div className="bill-container p-3">
