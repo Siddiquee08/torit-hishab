@@ -6,6 +6,10 @@
   font-family: 'font';
   src: url('./assets/font.woff') format('woff');
 }
+@font-face {
+  font-family: 'body';
+  src: url('./assets/body.ttf') format('ttf');
+}
 body {
   margin: 0;
   font-family: 'font', sans-serif;

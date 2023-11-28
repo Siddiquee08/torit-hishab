@@ -15,7 +15,7 @@ function App() {
         </h1>
       </div>
       <Input></Input>
-      <p className="text-center mt-2">
+      <p className="text-center mt-2 font-['body'] font-bold">
         <small>
           * এই বিল এর পরিমান হলো সম্ভাব্য সর্বোচ্চ কত আসতে পারে তার একটা অনুমান
           যা ডিপিডিসির ট্যারিফ রেট ধরে হিসেব করা হয়েছে।

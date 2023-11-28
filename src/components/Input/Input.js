@@ -61,14 +61,14 @@ const Input = () => {
                 <div className="card-body">
                   <div className="form-control">
                     <label className="label">
-                      <span className="label-text">
+                      <span className="label-text font-bold font-['body']">
                         ব্যবহৃত ইলেক্ট্রিক যন্ত্রটি কত ওয়াটের?
                       </span>
                     </label>
                     <input
                       type="tel"
                       placeholder="ওয়াট"
-                      className="input input-bordered rounded-none text-center text-2xl"
+                      className="input input-bordered rounded-none text-center text-2xl font-['body']"
                       required
                       value={userInfo.watt}
                       onChange={handleWatt}
@@ -79,12 +79,14 @@ const Input = () => {
                   )}
                   <div className="form-control">
                     <label className="label">
-                      <span className="label-text">দৈনিক কতক্ষণ চলে?</span>
+                      <span className="label-text font-['body'] font-bold">
+                        দৈনিক কতক্ষণ চলে?
+                      </span>
                     </label>
                     <input
                       type="tel"
                       placeholder="ঘন্টা"
-                      className="input input-bordered  rounded-none text-center text text-2xl"
+                      className="input input-bordered  rounded-none text-center text text-2xl font-['body']"
                       value={userInfo.hour}
                       onChange={handleHour}
                       required
@@ -97,7 +99,7 @@ const Input = () => {
                     <input
                       type="submit"
                       value="হিসাব"
-                      className="btn rounded-none btn-primary submit border-none text-end text text-2xl"
+                      className="btn rounded-none btn-primary submit border-none text-end text text-2xl font-['body']"
                       onClick={downUnder}
                     />
                   </div>
@@ -108,14 +110,14 @@ const Input = () => {
         </div>
       </form>
       <div className="money-input mt-5">
-        <p className="bill-text">
+        <p className="bill-text font-['body']">
           <span>ইলেক্ট্রিক যন্ত্রটি্র সম্ভাব্য মাসিক খরচ</span>
         </p>
         <div className="bill-container p-3">
           <p className="text-white">
-            <span className="text-xl">{bill} Taka</span>
+            <span className="text-xl font-['body']">{bill} Taka</span>
           </p>
-          <p className="text-white">(± {deviation} Taka)</p>
+          <p className="text-white font-['body']">(± {deviation} Taka)</p>
         </div>
       </div>
     </>
